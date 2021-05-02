@@ -14,7 +14,7 @@ ErrorDocument 403 /error/403_forbidden.php
 # 404 Not_Found 見つからない
 ErrorDocument 404 /error/404_not_found.html
 # 418 418 I'm_a_teapot 私はティーポットです
-#ErrorDocument 418 /error/418_im_a_teapot.html
+#ErrorDocument 418 /error/418_im_a_teapot.php
 
 # 5xx Server_Error サーバエラー
 # 500 Internal_Server_Error サーバ内部エラー
