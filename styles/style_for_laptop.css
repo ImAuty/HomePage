@@ -1,0 +1,21 @@
+/* laptop */
+@media (min-width: 768px) {
+    .content {
+        box-sizing: border-box;
+        width: 80%;
+        padding: 1rem;
+        margin: auto;
+    }
+
+    .flex-row-center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-item {
+        flex-basis: 50%;
+    }
+}

@@ -1,0 +1,21 @@
+/* mobile */
+@media (max-width: 575.98px) {
+    .content {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1rem;
+        margin: auto;
+    }
+
+    .flex-row-center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-item {
+        flex-basis: 100%;
+    }
+}
