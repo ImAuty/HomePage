@@ -10,7 +10,7 @@
 # 401 Unauthorized 認証が必要である
 ErrorDocument 401 /error/401_unauthorized.html
 # 403 Forbidden 禁止されている
-ErrorDocument 403 /error/403_forbidden.html
+ErrorDocument 403 /error/403_forbidden.php
 # 404 Not_Found 見つからない
 ErrorDocument 404 /error/404_not_found.html
 # 418 418 I'm_a_teapot 私はティーポットです
