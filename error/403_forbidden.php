@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error 404 (Not Found)</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/styles/style_for_laptop.css" media="(min-width: 768px)">
     <link rel="stylesheet" type="text/css" href="/styles/style_for_tablet.css" media="(min-width: 576px) and (max-width: 767.98px)">
     <link rel="stylesheet" type="text/css" href="/styles/style_for_mobile.css" media="(max-width: 575.98px)">
