@@ -67,7 +67,7 @@ Header always set Content-Security-Policy "default-src 'none'; script-src 'self'
 | Directive | Source | Description |
 | --- | --- | --- |
 | `default-src` | 'none' | `-src`で終わる**Directive**のデフォルト値を設定 |
-| `script-src ` | 'self' |  |
+| `script-src ` | 'self' 'unsafe-eval' | 'unsafe-eval'は文字列からのコード生成を許可する |
 | `style-src` | 'self' 'unsafe-inline' | 'unsafe-inline'の使用は避けたほうが良い |
 | `img-src` | 'self' |  |
 | `connect-src` | 'self' |  |
