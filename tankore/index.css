@@ -1,0 +1,166 @@
+body {
+    margin: 0rem;
+    font-size: 1rem;
+    user-select: none;
+}
+
+header {
+    width: auto;
+}
+
+.menu-area {
+    padding: 0.5rem;
+    border-bottom: solid 1px gainsboro;
+}
+
+.menu-area .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-area .col:first-child,
+.menu-area .col:last-child {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-area .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-area .title {
+    text-align: center;
+}
+
+.menu-area .title>h1 {
+    margin: 0rem;
+}
+
+.menu-area .help {
+    text-align: left;
+}
+
+main {
+    width: auto;
+}
+
+.output-area {
+    margin: 1rem;
+}
+
+.output-area .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.output-area .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.output-area .content {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.2rem;
+    background-color: white;
+    border: solid 2px gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.output-area .content>span {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.input-area {
+    margin: 1rem;
+}
+
+.input-area .row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.input-area .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-area .accept {
+    width: 6.4rem;
+    height: 3rem;
+    margin: 0.2rem;
+}
+
+.input-area .accept>button {
+    width: 100%;
+    height: 100%;
+    color: dimgray;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: greenyellow;
+}
+
+.input-area .delete {
+    width: 6.4rem;
+    height: 3rem;
+    margin: 0.2rem;
+}
+
+.input-area .delete>button {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: orangered;
+}
+
+.input-area .content {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.2rem;
+}
+
+.input-area .content>button {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: gainsboro;
+}
+
+footer {
+    width: auto;
+}
+
+.copyright-area {
+    padding: 1rem;
+    background-color: whitesmoke;
+}
+
+.copyright-area .content {
+    text-align: center;
+    color: gray;
+}
+
+.menu-area .content>span {
+    font-size: 1rem;
+}

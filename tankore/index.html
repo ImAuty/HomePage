@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>たんこれ！ - オーティーの研究日誌</title>
+    <!-- Vue.js Script -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- Original -->
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="menu-area">
+            <div class="row">
+                <div class="col">
+                    <!-- link -->
+                </div>
+                <div class="col">
+                    <!-- title -->
+                    <div class="title">
+                        <h1>たんこれ！</h1>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- help -->
+                    <div class="help">
+                        <span>α版</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="output-area">
+            <div class="col">
+                <div class="row" v-for="col in results">
+                    <div class="content" v-for="row in col" v-bind:key="row.key">
+                        <span>{{ row.value }}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content" v-for="row in outputs" v-bind:key="row.key">
+                        <span>{{ row.value }}</span>
+                    </div>
+                    <div class="content" v-for="row in numberOfRemainingLetters">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="row" v-for="col in numberOfRemainingAnswers">
+                    <div class="content" v-for="row in numberOfLetters">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-area">
+            <div class="row">
+                <div class="col">
+                    <div class="accept">
+                        <button type="button" v-on:click="answer()">
+                            確定
+                        </button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="delete">
+                        <button type="button" v-on:click="backSpace()">
+                            削除
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" v-for="col in inputs">
+                    <div class="content" v-for="row in col" v-bind:key="row.key">
+                        <button type="button" v-on:click="frontValue(row)" v-bind:disabled="row.isDisabled">
+                            {{ row.value }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright-area">
+            <div class="content">
+                <span>&copy; DeveloperAuty 2021</span>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
