@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>たんこれ！ - オーティーの研究日誌</title>
     <!-- Vue.js Script -->
+    <!-- <script src="https://unpkg.com/vue@next"></script> -->
     <script src="vue.global.prod.js"></script>
     <!-- Original -->
     <link href="index.css" rel="stylesheet">
@@ -36,21 +37,21 @@
     <main>
         <div class="output-area">
             <div class="col">
-                <div class="row" v-for="col in results">
-                    <div class="content" v-for="row in col" v-bind:key="row.key">
-                        <span>{{ row.value }}</span>
+                <div class="row" v-for="answer in result.answers">
+                    <div class="content" v-for="data in answer.datas" v-bind:key="data.key">
+                        <span>{{ data.value }}</span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="content" v-for="row in outputs" v-bind:key="row.key">
-                        <span>{{ row.value }}</span>
+                <div class="row" v-if="output.isAvailable">
+                    <div class="content" v-for="data in output.datas" v-bind:key="data.key">
+                        <span>{{ data.value }}</span>
                     </div>
-                    <div class="content" v-for="row in numberOfRemainingLetters">
+                    <div class="content" v-for="emptyLetter in numberOfRemainingLetters">
                         <span></span>
                     </div>
                 </div>
-                <div class="row" v-for="col in numberOfRemainingAnswers">
-                    <div class="content" v-for="row in numberOfLetters">
+                <div class="row" v-for="emptyAnswer in numberOfRemainingAnswers">
+                    <div class="content" v-for="emptyLetter in numberOfLetters">
                         <span></span>
                     </div>
                 </div>
@@ -61,28 +62,29 @@
                 <div class="col">
                     <div class="accept">
                         <button type="button" v-on:click="answer()">
-                            確定
+                            <span>確定</span>
                         </button>
                     </div>
                 </div>
                 <div class="col">
                     <div class="delete">
                         <button type="button" v-on:click="backSpace()">
-                            削除
+                            <span>削除</span>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col" v-for="col in inputs">
-                    <div class="content" v-for="row in col" v-bind:key="row.key">
-                        <button type="button" v-on:click="frontValue(row)" v-bind:disabled="row.isDisabled">
-                            {{ row.value }}
+                <div class="col" v-for="col in input.cols">
+                    <div class="content" v-for="data in col.datas" v-bind:key="data.key">
+                        <button type="button" v-on:click="frontValue(data.key)" v-bind:disabled="data.isDisabled">
+                            <span>{{ data.value }}</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="popupArea" class="popup-area"></div>
     </main>
     <footer>
         <div class="copyright-area">
