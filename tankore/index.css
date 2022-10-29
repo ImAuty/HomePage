@@ -2,6 +2,7 @@ body {
     margin: 0rem;
     font-size: 1rem;
     user-select: none;
+    touch-action: manipulation;
 }
 
 header {
