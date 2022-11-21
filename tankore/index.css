@@ -50,23 +50,23 @@ main {
     width: auto;
 }
 
-.output-area {
+.reply-area {
     margin: 1rem;
 }
 
-.output-area .col {
+.reply-area .col {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.output-area .row {
+.reply-area .row {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.output-area .content {
+.reply-area .content {
     width: 3.5rem;
     height: 3.5rem;
     margin: 0.2rem;
@@ -77,25 +77,48 @@ main {
     justify-content: center;
 }
 
-.output-area .content>span {
+.reply-area .no-content {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.2rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reply-area .content>span {
     font-weight: bold;
     font-size: 2rem;
 }
 
 .input-area {
-    margin: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0rem;
 }
 
 .input-area .row {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: right;
+    margin: 1rem;
 }
 
 .input-area .col {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.input-area .content {
+    height: 3rem;
+    margin: 0.2rem;
+}
+
+.input-area .content>span {
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .input-area .accept {
@@ -132,13 +155,29 @@ main {
     background-color: orangered;
 }
 
-.input-area .content {
+.letter-area {
+    margin: 1rem;
+}
+
+.letter-area .row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.letter-area .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.letter-area .content {
     width: 3rem;
     height: 3rem;
     margin: 0.2rem;
 }
 
-.input-area .content>button {
+.letter-area .content>button {
     width: 100%;
     height: 100%;
     color: black;
@@ -161,7 +200,7 @@ main {
     justify-content: center;
 }
 
-.input-area .col {
+.popup-area .col {
     display: flex;
     flex-direction: column;
     justify-content: center;
